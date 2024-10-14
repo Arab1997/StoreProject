@@ -1,0 +1,356 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+
+<body>
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <img src="{% static 'images/hero-bg.png' %}" alt="">
+    </div>
+
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <h1>
+                      {% trans "Biz sizning sog'ligingiz uchun qayg'uramiz!" %}
+                    </h1>
+                    <p>
+                    {% trans " 6 yil ichida ishlab chiqilgan va uzoq Sharq hayot eliksiri sifatida tanilgan hujayra hosil qiluvchi o'simlik ekstraktining mo'jizalaridan foydalaning." %}                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <h1>
+                      {% trans "Sog'lig'ingizni tiklashda yordam beramiz!" %}
+                    </h1>
+                    <p>
+                      {% trans "Biz sizga kasalliklarning havfini kamaytirish va meyorlashtirish maqsadida ta'biy shifobaxsh HAYOTILDIZI mahsulotini taqdim etamiz." %}
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+        </ol>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- department section -->
+
+  <section class="department_section layout_padding">
+    <div class="department_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            {% trans "___ Hayotildizi ning ta'siri ___" %}
+          </h2>
+          <p style="color: #111">
+            {% trans "Hayotildizi ning barcha organlarga ta'siri va foydasi." %}
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/w1.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {% trans 'Yurak qon tomir tizimi' %}
+                </h5>
+                <p style="color: #111">
+                  {% trans "Mahsulot sizning yurak-qon tomir tizimingizda regulyator vazifasini bajaradi va barcha muamolarni bartaraf etadi" %}
+                </p>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/w2.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {% trans "Oshqozon va ichak yo'llari" %}
+                </h5>
+                <p style="color: #111">
+                  {% trans "Oshqozon va ichakdagi muamolarni tezda bartaraf etadi va to'planib qolgan massani chiqarib tashlaydi." %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/w3.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {% trans "Bronx va o'pka kassaliklari" %}
+                </h5>
+                <p style="color: #111">
+                  {% trans "O'pka yo'llaridagi nafas siqishi va xirillashlar kabi muamolarni bartaraf etadi." %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/w4.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {% trans 'Xotira va asab tizimi' %}
+                </h5>
+                <p style="color: #111">
+                {% trans "Mahsulot sizning markaziy asab tizimingizga ta'sir qilish orqali miya faoliyatini oshiradi." %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/ww5.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {% trans 'Xarakat tayanch tizimi' %}
+                </h5>
+                <p style="color: #111">
+                  {% trans "Mahsulot charchoqni, kuchsizlikni va bezovtalikni ketkazadi va ular sizning organizmingizning tabiiy himoya mexanizmi va chidamliligini kuchaytiradi. " %}               </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/w5.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {% trans 'Jigar' %}
+                </h5>
+                <p style="color: #111">
+                  {% trans "Jigardagi xujayralarni qayta tiklashda juda katta foyda beredi va kerakli vitamin va minerallarni yetkazib beradi." %}
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/ww7.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {% trans 'Jinsiy zayiflik' %}
+                </h5>
+                <p style="color: #111">
+                  {% trans 'Erkaklar va ayollarda uchraydigan jinsiy zayifklikni davolaydi va oldini oladi.' %}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/ww8.png' %}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {% trans 'Buyraklar' %}
+                </h5>
+                <p style="color: #111">
+                  {% trans "Peshob kanalini tozalaydi, billirubin xolesterin, qondagi oqsil ko'rsatkichlarini yaxshilaydi." %}
+                </p>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end department section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_margin-bottom">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{% static 'images/about2.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                {% trans 'Mahsulot haqida' %}
+              </h2>
+            </div>
+            <p style="color: #111">
+             {% trans "Hayotildizi 6 yil ichida ishlab chiqilgan va uzoq Sharq hayot eliksiri sifatida tanilgan hujayra hosil qiluvchi o'simlik ekstraktining mo''jizalaridan foydalaning.Uzoq Sharqdagi hayot ixiri deb nomlanuvchi o'simlik hujayralari yaratuvchisi mo'jizasining mohiyatidan bahramand bo'lingMarkaziy asab tizimining miya faoliyatini oshiring. Ginseng tarkibida ko'p miqdordagi ginsenozidlar 600 dan ortiq ginsenozidlar har xil turdagi xom va qayta ishlangan ginsenglarda topilgan va o'rganilgan tufayli - terapevtik va profilaktik ta'sirida noyob va xilma-xil bo'lib, ushbu dorivor o'simlikdan to'g'ri foydalanish mumkin nafaqatturli xil terapevtik ta'sirlarni, balki hatto diametrli teskari ta'sirlarni ham ta'minlaydi. Masalan, qon bosimini me'yorga ko'tarish va kamaytirish, markaziy asab tizimining ishini tezlashtirish va sekinlashtirish, uyquni normallashtirish va uyquchanlikni yo'qotish, kerakli vaqtda faol bedorlik, eng yaxshi farovonlik va chidamlilik bosqichini uzaytirish." %}
+<br><br>
+              <h1>{% trans 'Ichish tartipi' %}</h1>
+
+              {% trans '*Tarkibi: Qizil Ginseng' %}
+              <br>
+              {% trans '*FOYDALANISh: Kuniga 2-3 marta 1 kapsuladan ichish tavsiya etiladi.' %}
+              <br>
+              {% trans '*RED GINSENG-800 mg x 60 kapsulalar.' %}
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- doctor section -->
+
+  <section class="doctor_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          {% trans "Mahsulotning sifat ko'rsatkichini tastiqlo'vchi xujjatlar" %}
+        </h2>
+        <p class="col-md-10 mx-auto px-0" style="color: white;">
+          {% trans 'Sertifikat va xulosalar' %}
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/d1.jpg' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+              <h5>
+                Elina Josh
+              </h5>
+              <h6 class="">
+                Doctor
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/d2.jpg' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+              <h5>
+                Adam View
+              </h5>
+              <h6 class="">
+                Doctor
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/d3.jpg' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+               </a>
+                <a href="">
+                  <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+              <h5>
+                Mia Mike
+              </h5>
+              <h6 class="">
+                Doctor
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end doctor section -->
+
+
+{% endblock %}

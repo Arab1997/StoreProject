@@ -1,0 +1,11 @@
+[Unit]
+Description=Bot Template
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/root/vpn_bot
+ExecStart=/root/vpn_bot/env/bin/python /root/vpn_bot/bot.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

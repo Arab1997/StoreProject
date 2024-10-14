@@ -1,0 +1,25 @@
+Multi language with modeltranslation ✅
+Contact with django-celery ✅
+Staff info kun.uz ✅
+Blog, BlogDetail ✅
+Last news ✅
+Category ✅
+Region ✅
+Search ✅
+View ✅
+
+Additional features ⬇
+
+Index ✅
+Cache - django redis cache ✅
+Permissions - IsAdminOrReadOnly, AllowAny
+
+
+Testing✅
+Parsers✅
+permissions✅
+Renderers✅
+Validators✅
+Authentication✅
+filter set
+Depth✅

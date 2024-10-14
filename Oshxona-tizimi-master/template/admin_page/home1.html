@@ -1,0 +1,68 @@
+{% extends 'admin_page/admin.html' %}
+{% block title %}Buxgalter sahifasi{% endblock title %}
+{% block content %}
+<p></p>
+<div class="col-10 offset-2">
+<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <a href="{% url 'admin_page' %}" class="btn btn-outline-primary"><h4>Bugungi buyurtmalar</h4></a>
+  <a href="{% url 'admin_page1' %}" class="btn btn-outline-primary"><h4>Haftalik buyurtmalar</h4></a>
+  <a href="{% url 'admin_page2' %}" class="btn btn-outline-primary"><h4>Oylik buyurtmalar</h4></a>
+</div>
+</div>
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <h5>{{ week }} dan {{ today }} gacha oraliq sanadagi buyurtmalar</h5>
+    <span class="navbar-text-active">
+      <h5>Umumiy summa: {{ summa }}</h5>
+      </span>
+  </div>
+</nav>
+
+<table class="table">
+  <thead>
+    <tr class="table table-dark">
+      <th scope="col">Number</th>
+      <th scope="col">Mahsulotlar</th>
+      <th scope="col">Buyurtma vaqti</th>
+      <th scope="col">Bajarilgan vaqti</th>
+      <th scope="col">Naqd</th>
+      <th scope="col">Plastik</th>
+      <th scope="col">Holati</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for order in week_orders %}
+    <tr>
+      <th scope="row">
+        {% if order.order_completed %}
+        {{ order.ref_code }}
+        {% else %}
+        <a href="{% url 'order_completed' order.pk %}">{{ order.ref_code }}</a>
+        {% endif %}
+      </th>
+      <td>{% for order_product in order.products.all %}
+        <button type="button" class="btn btn-warning p-1 mb-2" style="width: 120px;">
+            {{ order_product.product.name }} <span class="badge text-bg-secondary">{{ order_product.quantity }}</span>
+        </button>
+        {% endfor %}
+      </td>
+      <td>{{ order.ordered_date }}</td>
+      <td>{{ order.order_completed_date }}</td>
+      <td>{{ order.cash }}</td>
+      {% if order.plastic %}
+        <td>{{ order.plastic }}</td>
+      {% else %}
+        <td>0</td>
+      {% endif %}
+      {% if order.order_completed %}
+        <td><button type="button" class="btn btn-success disabled p-1 mb-2" style="width: 120px;">Bajarilgan</button></td>
+      {% else %}
+        <td><button type="button" class="btn btn-primary disabled p-1 mb-2" style="width: 120px;">Bajarilmoqda...</button></td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

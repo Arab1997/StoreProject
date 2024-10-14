@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post API Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>AI Generate QRCode </h1>
+    <form id="apiForm">
+        <label for="text_prompt">Text For QRCode</label><br>
+        <input type="text" id="text_prompt" name="text_prompt"><br>
+        <label for="qr_code_data">QR Code Data</label><br>
+        <input type="text" id="qr_code_data" name="qr_code_data"><br><br>
+        <button type="button" onclick="postData()">Submit</button>
+    </form>
+
+    <div id="response"></div>
+    <script src="main.js"></script>
+</body>
+</html>

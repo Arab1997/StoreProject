@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% block title %}Cashier page{% endblock title %}
+{% block content %}
+    <section class="kassir">
+        <div class="row">
+            <div class="col-6 p-2">
+                <h1 class="text-center fs-1 fw-bold text-dark pt-2 mb-3">
+                    Mahsulotlar
+                </h1>
+            {% for object in objects %}
+                <ul class="category-list d-flex flex-column mb-3">
+                    <li class="fas-item p-3 d-flex flex-column mb-3 bg-light">
+                        <h2 class="category-title mb-3 fs-1 text-success">
+                            {{ object.category.name }}
+                        </h2>
+                        <div class="wrapper  align-items-center justify-content-between mb-3 rounded p-2">
+                            {% for product in object.products %}
+
+                              {% if product.discount_price == None %}
+                              <a href="{{ product.get_add_to_card_url }}" class="btn btn-outline-primary w-30 p-1 mb-2" style="width: 152px;">
+                                      <h4 class="card-title">{{ product.name }}</h4>
+                                      Narxi: {{ product.price }}
+
+                              </a>
+                              {% else %}
+                              <a href="{{ product.get_add_to_card_url }}" class="btn btn-outline-primary w-30 p-1 mb-2" style="width: 153px;">
+                                      <h4 class="card-title">{{ product.name }}</h4>
+                                      Aksiya narxi: {{ product.discount_price }}
+                              </a>
+                              {% endif %}
+                            {% endfor %}
+                        </div>
+                    </li>
+                </ul>
+            {% endfor %}
+            </div>
+
+            <div class="col-6 p-2">
+                <h1 class="text-center fs-1 fw-bold text-dark pt-2 mb-3">
+                    Xaridlar
+                </h1>
+
+                <ul class="category-list d-flex flex-column mb-3">
+                    <li class="purchase-item-fas p-3 d-flex flex-column mb-5 bg-light">
+                        <h2 class="category-title mb-3 fs-1 text-success">
+                            Tanlangan mahsulotlar
+                        </h2>
+                        <div class="wrapper  align-items-center justify-content-between mb-3 rounded p-1">
+                        {% for order_product in order_one.products.all %}
+                            <div class="buttons d-inline-flex p-1 bd-highlight justify-content-center">
+                                <a href="{{ order_product.product.get_remove_from_card_url }}" class="pay btn btn-outline-success p-2" style="width: 140px;">
+                                    {{ order_product.product.name }} <span class="badge text-bg-dark">{{ order_product.quantity }}</span>
+                                </a>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </li>
+                </ul>
+
+                <div class=" d-flex align-items-center justify-content-around all-price">
+                    <div class="p-4 text bg-light">
+                        <h4 class="fs-3 text-center bg-light">Chek</h4>
+                        <table class="table table-sm">
+                          <thead>
+                            <tr>
+                              <th scope="col">Mahsulotlar</th>
+                              <th scope="col">Soni</th>
+                              <th scope="col">Narxi</th>
+                            </tr>
+                          </thead>
+                          <tbody class="table-group-divider">
+                          {% for order_project in order_one.products.all %}
+                            <tr>
+                              <td>{{ order_project.product.name }}</td>
+                              <td>{{ order_project.quantity }}</td>
+                              <td>{{ order_project.get_final_price }}</td>
+                            </tr>
+                          {% endfor %}
+                            <tr>
+                                <td>Umumiy summa: </td>
+                                <td></td>
+                                <td>{{ order_one.get_total }}</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <div class="buttons d-flex flex-column justify-content-center">
+                        <button type="button" class="pay btn btn-outline-success p-3 mb-2 text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          To'landi
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title fs-5" id="exampleModalLabel">Haqiqatdan ham buyurtma puli to'landimi?</h5>
+<!--                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                                <a href="{{ order_one.get_products_ordered_url }}" class="btn btn-primary">To'landi</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a href="{{ order_one.get_partial_payment_url }}" class="pay btn btn-outline-success p-3 text-uppercase">
+                            Qisman to'landi
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr class="table table-success">
+      <th scope="col">Number</th>
+      <th scope="col">Mahsulotlar</th>
+      <th scope="col">Buyurtma vaqti</th>
+      <th scope="col">Bajarilgan vaqti</th>
+      <th scope="col">Holati</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for order in today_orders %}
+    <tr>
+      <th scope="row">{{ order.ref_code }}</th>
+      <td>{% for order_product in order.products.all %}
+        <button type="button" class="btn btn-warning">
+            <h6>{{ order_product.product.name }} <span class="badge text-bg-secondary">{{ order_product.quantity }}</span></h6>
+        </button>
+
+        {% endfor %}
+      </td>
+      <td>{{ order.ordered_date.time }}</td>
+      <td>{{ order.order_completed_date.time }}</td>
+      {% if order.order_completed %}
+        <td><button type="button" class="btn btn-primary" disabled  style="width: 150px;">Tayyor</button></td>
+      {% else %}
+        <td><button type="button" class="btn btn-success" disabled  style="width: 150px;">Tayyorlanmoqda...</button></td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+
+{% endblock content %}

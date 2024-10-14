@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Chef page{% endblock title %}
+{% block content %}
+<p></p>
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <h5>Buyurtmalar. Buyurtma tayyor bo'lganidan so'ng 'Bajarildi' tugmasini bosing. Sana: {{ today }}.</h5>
+  </div>
+</nav>
+
+<table class="table table-hover">
+  <thead>
+    <tr tr class="table table-success">
+      <th scope="col">Number</th>
+      <th scope="col">Mahsulotlar</th>
+      <th scope="col">Buyurtma vaqti</th>
+      <th scope="col">Bajarilgan vaqti</th>
+      <th scope="col">Holati</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for order in today_orders %}
+    <tr>
+      <th scope="row">{{ order.ref_code }}</th>
+      <td>{% for order_product in order.products.all %}
+        <button type="button" class="btn btn-warning">
+            <h6>{{ order_product.product.name }} <span class="badge text-bg-secondary">{{ order_product.quantity }}</span></h6>
+        </button>
+
+        {% endfor %}
+      </td>
+      <td>{{ order.ordered_date.time }}</td>
+      <td>{{ order.order_completed_date.time }}</td>
+      {% if order.order_completed %}
+        <td><button type="button" class="btn btn-primary" disabled  style="width: 120px;">Bajarilgan</button></td>
+      {% else %}
+        <td><a href="{{ order.get_order_completed_url }}" class="btn btn-success"  style="width: 120px;">Bajarildi</a></td>
+      {% endif %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

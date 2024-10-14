@@ -1,0 +1,224 @@
+[
+    {
+        "label": "InlineKeyboardButton",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "InlineKeyboardMarkup",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "ReplyKeyboardMarkup",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "ReplyKeyboardRemove",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "KeyboardButton",
+        "importPath": "aiogram.types",
+        "description": "aiogram.types",
+        "isExtraImport": true,
+        "detail": "aiogram.types",
+        "documentation": {}
+    },
+    {
+        "label": "Bot",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "Dispatcher",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "executor",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "types",
+        "importPath": "aiogram",
+        "description": "aiogram",
+        "isExtraImport": true,
+        "detail": "aiogram",
+        "documentation": {}
+    },
+    {
+        "label": "MemoryStorage",
+        "importPath": "aiogram.contrib.fsm_storage.memory",
+        "description": "aiogram.contrib.fsm_storage.memory",
+        "isExtraImport": true,
+        "detail": "aiogram.contrib.fsm_storage.memory",
+        "documentation": {}
+    },
+    {
+        "label": "chat",
+        "importPath": "handler",
+        "description": "handler",
+        "isExtraImport": true,
+        "detail": "handler",
+        "documentation": {}
+    },
+    {
+        "label": "Token",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "keyboard",
+        "kind": 2,
+        "importPath": "keyboard.inline",
+        "description": "keyboard.inline",
+        "peekOfCode": "def keyboard(data:list) -> InlineKeyboardMarkup:\n    buttons:list = []\n    for step in data:\n        step_list:list = []\n        for call in step:\n            if call[1].startswith('http'):\n                step_list.append(InlineKeyboardButton(text=call[0], url=call[1]))\n            elif call[1].startswith('@'):\n                step_list.append(InlineKeyboardButton(text=call[0], url=f\"https://t.me/{call[1][1:]}\"))\n            else:",
+        "detail": "keyboard.inline",
+        "documentation": {}
+    },
+    {
+        "label": "keyboard",
+        "kind": 2,
+        "importPath": "keyboard.reply",
+        "description": "keyboard.reply",
+        "peekOfCode": "def keyboard(data:list) -> ReplyKeyboardMarkup:\n    return ReplyKeyboardMarkup(\n        keyboard=map(lambda step:[KeyboardButton(text=text[0]) for text in step] , data),\n        resize_keyboard=True,\n        one_time_keyboard=True,\n        input_field_placeholder='select button ↓',\n        )\ndef Phone(button_text:str, input_field:str) -> ReplyKeyboardMarkup:\n    return ReplyKeyboardMarkup(\n        keyboard=[",
+        "detail": "keyboard.reply",
+        "documentation": {}
+    },
+    {
+        "label": "Phone",
+        "kind": 2,
+        "importPath": "keyboard.reply",
+        "description": "keyboard.reply",
+        "peekOfCode": "def Phone(button_text:str, input_field:str) -> ReplyKeyboardMarkup:\n    return ReplyKeyboardMarkup(\n        keyboard=[\n            [KeyboardButton(\n                    text=button_text\n                )]\n            ],\n        resize_keyboard=True,\n        input_field_placeholder=input_field,\n    )",
+        "detail": "keyboard.reply",
+        "documentation": {}
+    },
+    {
+        "label": "remove",
+        "kind": 2,
+        "importPath": "keyboard.reply",
+        "description": "keyboard.reply",
+        "peekOfCode": "def remove() -> ReplyKeyboardRemove:\n    return ReplyKeyboardRemove()",
+        "detail": "keyboard.reply",
+        "documentation": {}
+    },
+    {
+        "label": "Token",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "Token = \"6207477490:AAF6zGEDKSLOxfcj-K6qqbIVWWirXMZSpuE\"",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "storage:MemoryStorage",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "storage:MemoryStorage = MemoryStorage()\nbot = Bot(token=Token)\ndp = Dispatcher(bot=bot, storage=storage)\nchat.register(dp)\nif __name__ == '__main__':\n    executor.start_polling(dp, skip_updates=True)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "bot",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "bot = Bot(token=Token)\ndp = Dispatcher(bot=bot, storage=storage)\nchat.register(dp)\nif __name__ == '__main__':\n    executor.start_polling(dp, skip_updates=True)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "dp",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "dp = Dispatcher(bot=bot, storage=storage)\nchat.register(dp)\nif __name__ == '__main__':\n    executor.start_polling(dp, skip_updates=True)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "post_number",
+        "kind": 2,
+        "importPath": "MyApi",
+        "description": "MyApi",
+        "peekOfCode": "def post_number(lang:str, number:str) -> list:\n    response = requests.post(POST_PHONE, headers={\"Accept-Language\":lang}, data={'phone':number})\n    return [response.json()['status'], response.json()['message']]\ndef post_code(lang:str, number:str, code:str) -> str:\n    response = requests.post(POST_CODE, headers={\"Accept-Language\":lang}, data={'phone':number, 'code':code})\n    return [response.json()['status'], response.json()['message']]",
+        "detail": "MyApi",
+        "documentation": {}
+    },
+    {
+        "label": "post_code",
+        "kind": 2,
+        "importPath": "MyApi",
+        "description": "MyApi",
+        "peekOfCode": "def post_code(lang:str, number:str, code:str) -> str:\n    response = requests.post(POST_CODE, headers={\"Accept-Language\":lang}, data={'phone':number, 'code':code})\n    return [response.json()['status'], response.json()['message']]",
+        "detail": "MyApi",
+        "documentation": {}
+    },
+    {
+        "label": "POST_PHONE",
+        "kind": 5,
+        "importPath": "MyApi",
+        "description": "MyApi",
+        "peekOfCode": "POST_PHONE = \"https://afishauz-backend.uz/api/mobile/delete-account\"\nPOST_CODE = \"https://afishauz-backend.uz/api/mobile/confirm-delete-sms\"\ndef post_number(lang:str, number:str) -> list:\n    response = requests.post(POST_PHONE, headers={\"Accept-Language\":lang}, data={'phone':number})\n    return [response.json()['status'], response.json()['message']]\ndef post_code(lang:str, number:str, code:str) -> str:\n    response = requests.post(POST_CODE, headers={\"Accept-Language\":lang}, data={'phone':number, 'code':code})\n    return [response.json()['status'], response.json()['message']]",
+        "detail": "MyApi",
+        "documentation": {}
+    },
+    {
+        "label": "POST_CODE",
+        "kind": 5,
+        "importPath": "MyApi",
+        "description": "MyApi",
+        "peekOfCode": "POST_CODE = \"https://afishauz-backend.uz/api/mobile/confirm-delete-sms\"\ndef post_number(lang:str, number:str) -> list:\n    response = requests.post(POST_PHONE, headers={\"Accept-Language\":lang}, data={'phone':number})\n    return [response.json()['status'], response.json()['message']]\ndef post_code(lang:str, number:str, code:str) -> str:\n    response = requests.post(POST_CODE, headers={\"Accept-Language\":lang}, data={'phone':number, 'code':code})\n    return [response.json()['status'], response.json()['message']]",
+        "detail": "MyApi",
+        "documentation": {}
+    }
+]

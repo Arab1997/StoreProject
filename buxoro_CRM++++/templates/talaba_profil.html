@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talaba profil ||Nodirbek ADU</title>
+    <!--  font CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- root CSS -->
+    <link rel="stylesheet" href="{% static 'root.css' %}">
+    <!-- standart CSS -->
+    <link rel="stylesheet" href="{% static 'standart.css' %}">
+    <!--  Hard CSS -->
+    <link rel="stylesheet" href="{% static 'talaba_profil.css' %}">
+    
+</head>
+<body>
+
+  <nav class="navbar">
+		<div class="logo_item">
+			<i class="fa-solid fa-bars" id="sidebarOpen"></i>
+		  <img src="images/logo.png" alt=""></i>NodirbekADU
+		</div>
+		<div class="search_bar">
+			 <p>Ustozlar oynasi</p>
+		</div>
+		<div class="navbar_content">
+		  <i class="bi bi-grid"></i>
+		  <i class='bx' id="darkLight"></i>
+		  <i class='bx bx-bell' ></i>
+		  <img src="images/profile.jpg" alt="" class="profile" />
+		</div>
+	  </nav>
+	  <!-- sidebar -->
+	  <nav class="sidebar">
+		<div class="menu_content">
+		  <ul class="menu_items">
+			<div class="menu_title menu_dahsboard"></div>
+			<!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+			<!-- start -->
+			<li class="item">
+				<a href="/mentor/indexteacher" class="nav_link">
+				  <span class="navlink_icon">
+					<i class="fa-solid fa-chart-line"></i>
+				  </span>
+				  <span class="navlink"> Dashboard</span>
+				</a>
+			  </li>
+	
+			  <li class="item">
+				<a href="/mentor/reja" class="nav_link">
+				  <span class="navlink_icon">
+					<i class="fa-solid fa-layer-group"></i>                  </span>
+				  <span class="navlink"> O'quv Rejasi</span>
+				</a>
+			  </li>
+			  <li class="item">
+				<a href="/mentor/guruh" class="nav_link">
+				  <span class="navlink_icon">
+					<i class="fa-solid fa-people-group"></i>                  </span>
+				  <span class="navlink"> Guruhlar</span>
+				</a>
+			  </li>
+			  <li class="item">
+				<a href="/mentor/saqlamalar" class="nav_link">
+				  <span class="navlink_icon">
+					<i class="fa-solid fa-bookmark"></i>              </span>
+				  <span class="navlink"> Saqlamalar</span>
+				</a>
+			  </li>
+			  <li class="item">
+				<a href="#" class="nav_link">
+				  <span class="navlink_icon">
+					<i class="fa-solid fa-notes-medical"></i>                  </span>
+				  <span class="navlink">Notion</span>
+				</a>
+			  </li>
+		  </ul>
+	
+		  <!-- Sidebar Open / Close -->
+		  <div class="bottom_content">
+			<div class="bottom expand_sidebar">
+			  <span> Expand</span>
+			  <i class="fa-solid fa-right-to-bracket"></i>
+			</div>
+			<div class="bottom collapse_sidebar">
+			  <span> Collapse</span>
+			  <i class="fa-solid fa-arrow-left"></i>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+    <div class="wrapper">
+        <div class="card front-face">
+         <div class="user_name_img">
+             <p>{{bitatalaba.ism}} {{bitatalaba.fam}}</p>
+             <img src="{{bitatalaba.rasm.url}}">
+         </div>
+<ul class="abouttalaba">
+
+
+   <div>
+	   <p>Guruh:</p>
+	   <li class="">{{bitatalaba.guruh_fk}}</li>
+	</div>
+
+
+ <div class="">
+	 <p>O'qituvchisi:</p>
+	 <li class="">{{mentor}}</li>
+	</div>
+
+
+<div class="">
+	<p>Kurs Boshlagan vaqti:</p>
+    <li>{{bitatalaba.guruh_fk.ochilgan_sana}}</li>
+</div>
+
+
+
+<div class="">
+	<p>Qoldirgan dars soati:</p>
+    <li>{{qoldirilgan_darslar_soni}}</li>
+</div>
+
+
+
+<div class="">
+
+	<p>Telefon raqami:</p>
+    <li>{{bitatalaba.tel_1}}</li>
+</div>
+
+
+
+	<div class="">
+
+		<p>Ota-onasining telefon raqami:</p>
+		<li>{{bitatalaba.tel_2}}</li>
+	</div>
+
+		<div class="">
+
+		<p>Tug'ulgan sanasi :</p>
+		<li>{{bitatalaba.tugulgan_sana}}</li>
+	</div>
+		<div class="">
+
+		<p>Tug'ulgan joyi :</p>
+		<li>{{bitatalaba.tugulgan_joy}}</li>
+	</div>
+
+
+</ul>
+
+        </div>
+        <div class="card back-face">
+          <span class="alo">4</span>
+          <span class="yaxshi">10</span>
+          <span class="past">5</span>
+          <span class="yomon">2</span>
+          <div class="chart doughnut-chart">
+            <p>Talaba mavzularni o'zlashtirish</p>
+            <div>
+                <canvas id="doughnut"></canvas>
+            </div>
+        </div>
+        </div>
+     </div>
+     <style>
+      
+     </style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+<script src="{% static './talaba_profil.js' %}"></script>
+<script src="{% static '/standart.js' %}"></script>
+</body>
+</html>

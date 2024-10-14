@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-26 19:52+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\hayotildizi\templates\pages\about.html:21
+#: .\hayotildizi\templates\pages\home.html:241
+msgid "Mahsulot haqida"
+msgstr "О продукте"
+
+#: .\hayotildizi\templates\pages\about.html:25
+#: .\hayotildizi\templates\pages\home.html:245
+msgid ""
+"Hayotildizi 6 yil ichida ishlab chiqilgan va uzoq Sharq hayot eliksiri "
+"sifatida tanilgan hujayra hosil qiluvchi o'simlik ekstraktining "
+"mo''jizalaridan foydalaning.Uzoq Sharqdagi hayot ixiri deb nomlanuvchi "
+"o'simlik hujayralari yaratuvchisi mo'jizasining mohiyatidan bahramand "
+"bo'lingMarkaziy asab tizimining miya faoliyatini oshiring. Ginseng tarkibida "
+"ko'p miqdordagi ginsenozidlar 600 dan ortiq ginsenozidlar har xil turdagi "
+"xom va qayta ishlangan ginsenglarda topilgan va o'rganilgan tufayli - "
+"terapevtik va profilaktik ta'sirida noyob va xilma-xil bo'lib, ushbu dorivor "
+"o'simlikdan to'g'ri foydalanish mumkin nafaqatturli xil terapevtik "
+"ta'sirlarni, balki hatto diametrli teskari ta'sirlarni ham ta'minlaydi. "
+"Masalan, qon bosimini me'yorga ko'tarish va kamaytirish, markaziy asab "
+"tizimining ishini tezlashtirish va sekinlashtirish, uyquni normallashtirish "
+"va uyquchanlikni yo'qotish, kerakli vaqtda faol bedorlik, eng yaxshi "
+"farovonlik va chidamlilik bosqichini uzaytirish."
+msgstr "Воспользуйтесь чудом клеткообразующего растительного экстракта, который был разработан за 6 лет и известен как эликсир жизни на Дальнем Востоке. Наслаждайтесь сущностью чуда создателя растительных клеток на Дальнем Востоке. Из-за большого количества гинсенозидов в женьшене было обнаружено и изучено более 600 гинсенозидов в различных типах сырого и переработанного женьшеня -Уникальное и разнообразное по терапевтическому и профилактическому воздействию, это лекарственное растение можно использовать должным образом, оказывая не только разнообразные терапевтические эффекты, но и диаметрально противоположные побочные эффекты. Например, повышение и понижение артериального давления до нормального, ускорение и замедление работы центральной нервной системы, нормализация сна и потеря сонливости, продление фазы активного бодрствования, оптимального самочувствия и выносливости при необходимости."
+
+#: .\hayotildizi\templates\pages\about.html:28
+#: .\hayotildizi\templates\pages\home.html:247
+msgid "Ichish tartipi"
+msgstr "Питьевой режим"
+
+#: .\hayotildizi\templates\pages\about.html:30
+#: .\hayotildizi\templates\pages\home.html:249
+msgid "*Tarkibi: Qizil Ginseng"
+msgstr "*Состав: красный женьшень."
+
+#: .\hayotildizi\templates\pages\about.html:32
+#: .\hayotildizi\templates\pages\home.html:251
+msgid "*FOYDALANISh: Kuniga 2-3 marta 1 kapsuladan ichish tavsiya etiladi."
+msgstr "*ПРИМЕНЕНИЕ: Рекомендуется принимать по 1 капсуле 2-3 раза в день."
+
+#: .\hayotildizi\templates\pages\about.html:34
+#: .\hayotildizi\templates\pages\home.html:253
+msgid "*RED GINSENG-800 mg x 60 kapsulalar."
+msgstr "*КРАСНЫЙ ЖЕНЬШЕНЬ-800 мг x 60 капсул."
+
+#: .\hayotildizi\templates\pages\departments.html:12
+#: .\hayotildizi\templates\pages\home.html:84
+msgid "___ Hayotildizi ning ta'siri ___"
+msgstr "___ Hayotildizi эффект ___"
+
+#: .\hayotildizi\templates\pages\departments.html:15
+#: .\hayotildizi\templates\pages\home.html:87
+msgid "Hayotildizi ning barcha organlarga ta'siri va foydasi."
+msgstr "эффекты и преимущества Hayotildizi на все органы."
+
+#: .\hayotildizi\templates\pages\departments.html:26
+#: .\hayotildizi\templates\pages\home.html:98
+msgid "Yurak qon tomir tizimi"
+msgstr "Сердечно-сосудистая система"
+
+
+#: .\hayotildizi\templates\pages\departments.html:29
+#: .\hayotildizi\templates\pages\home.html:101
+msgid ""
+"Mahsulot sizning yurak-qon tomir tizimingizda regulyator vazifasini bajaradi "
+"va barcha muamolarni bartaraf etadi"
+msgstr "Продукт действует как регулятор вашей сердечно-сосудистой системы и устраняет все проблемы."
+
+#: .\hayotildizi\templates\pages\departments.html:43
+#: .\hayotildizi\templates\pages\home.html:115
+msgid "Oshqozon va ichak yo'llari"
+msgstr "Желудочно-кишечный тракт"
+
+#: .\hayotildizi\templates\pages\departments.html:46
+#: .\hayotildizi\templates\pages\home.html:118
+msgid ""
+"Oshqozon va ichakdagi muamolarni tezda bartaraf etadi va to'planib qolgan "
+"massani chiqarib tashlaydi."
+msgstr "Быстро устраняет проблемы с желудком и кишечником, удаляет скопившуюся массу."
+
+#: .\hayotildizi\templates\pages\departments.html:59
+#: .\hayotildizi\templates\pages\home.html:131
+msgid "Bronx va o'pka kassaliklari"
+msgstr "Бронхиальные и легочные заболевания"
+
+#: .\hayotildizi\templates\pages\departments.html:62
+#: .\hayotildizi\templates\pages\home.html:134
+msgid ""
+"O'pka yo'llaridagi nafas siqishi va xirillashlar kabi muamolarni bartaraf "
+"etadi."
+msgstr "Устраняет такие проблемы, как одышка и хрипы в легких."
+
+#: .\hayotildizi\templates\pages\departments.html:75
+#: .\hayotildizi\templates\pages\home.html:147
+msgid "Xotira va asab tizimi"
+msgstr "Память и нервная система"
+
+#: .\hayotildizi\templates\pages\departments.html:78
+#: .\hayotildizi\templates\pages\home.html:150
+msgid ""
+"Mahsulot sizning markaziy asab tizimingizga ta'sir qilish orqali miya "
+"faoliyatini oshiradi."
+msgstr "Продукт увеличивает мозговую активность, воздействуя на центральную нервную систему."
+
+#: .\hayotildizi\templates\pages\departments.html:92
+#: .\hayotildizi\templates\pages\home.html:164
+msgid "Xarakat tayanch tizimi"
+msgstr "Базовая система движения"
+
+#: .\hayotildizi\templates\pages\departments.html:95
+#: .\hayotildizi\templates\pages\home.html:167
+msgid ""
+"Mahsulot charchoqni, kuchsizlikni va bezovtalikni ketkazadi va ular sizning "
+"organizmingizning tabiiy himoya mexanizmi va chidamliligini kuchaytiradi. "
+msgstr "Продукт устраняет усталость, слабость и дискомфорт, а также укрепляет естественные защитные механизмы и выносливость вашего тела."
+
+#: .\hayotildizi\templates\pages\departments.html:108
+#: .\hayotildizi\templates\pages\home.html:180
+msgid "Jigar"
+msgstr "Печень"
+
+#: .\hayotildizi\templates\pages\departments.html:111
+#: .\hayotildizi\templates\pages\home.html:183
+msgid ""
+"Jigardagi xujayralarni qayta tiklashda juda katta foyda beredi va kerakli "
+"vitamin va minerallarni yetkazib beradi."
+msgstr "Он очень полезен для регенерации клеток печени и обеспечивает необходимые витамины и минералы."
+
+#: .\hayotildizi\templates\pages\departments.html:125
+#: .\hayotildizi\templates\pages\home.html:197
+msgid "Jinsiy zayiflik"
+msgstr "Сексуальная слабость"
+
+#: .\hayotildizi\templates\pages\departments.html:128
+#: .\hayotildizi\templates\pages\home.html:200
+msgid ""
+"Erkaklar va ayollarda uchraydigan jinsiy zayifklikni davolaydi va oldini "
+"oladi."
+msgstr "Лечит и предотвращает половое бессилие у мужчин и женщин."
+
+#: .\hayotildizi\templates\pages\departments.html:140
+#: .\hayotildizi\templates\pages\home.html:212
+msgid "Buyraklar"
+msgstr "Почки"
+
+#: .\hayotildizi\templates\pages\departments.html:143
+#: .\hayotildizi\templates\pages\home.html:215
+msgid ""
+"Peshob kanalini tozalaydi, billirubin xolesterin, qondagi oqsil "
+"ko'rsatkichlarini yaxshilaydi."
+msgstr "Очищает мочевыводящие пути, улучшает холестерин билирубина, уровень белка в крови."
+
+#: .\hayotildizi\templates\pages\doctors.html:12
+#: .\hayotildizi\templates\pages\home.html:270
+msgid "Mahsulotning sifat ko'rsatkichini tastiqlo'vchi xujjatlar"
+msgstr "Документы, подтверждающие качество товара"
+
+#: .\hayotildizi\templates\pages\doctors.html:15
+#: .\hayotildizi\templates\pages\home.html:273
+msgid "Sertifikat va xulosalar"
+msgstr "Сертификат и заключения"
+
+#: .\hayotildizi\templates\pages\footer.html:12
+msgid "Bizning manzil."
+msgstr "Наш адрес."
+
+#: .\hayotildizi\templates\pages\footer.html:18
+msgid "Toshkent shax, Chilonzor tumani, Achvat kochasi 77"
+msgstr "Город Ташкент, Чиланзарский район."
+
+#: .\hayotildizi\templates\pages\footer.html:24
+msgid "Tel:+99871 230-33-99"
+msgstr "Телефон: +99871 230-33-99"
+
+#: .\hayotildizi\templates\pages\footer.html:53
+msgid "Ma'lumot"
+msgstr "Информация"
+
+#: .\hayotildizi\templates\pages\footer.html:56
+msgid ""
+"Hayotildizi 6 yil ichida ishlab chiqilgan va Uzoq Sharq hayot eliksiri "
+"sifatida tanilgan hujayra hosil qiluvchi o'simlik ekstraktining "
+"mo''jizalaridan foydalaning."
+msgstr "Используйте чудеса экстракта растений, образующих клетки, который вырабатывается за 6 лет и известен как дальневосточный эликсир жизни."
+
+#: .\hayotildizi\templates\pages\home.html:38
+msgid "Biz sizning sog'ligingiz uchun qayg'uramiz!"
+msgstr "Мы заботимся о вашем здоровье!"
+
+#: .\hayotildizi\templates\pages\home.html:41
+msgid ""
+" 6 yil ichida ishlab chiqilgan va uzoq Sharq hayot eliksiri sifatida "
+"tanilgan hujayra hosil qiluvchi o'simlik ekstraktining mo'jizalaridan "
+"foydalaning."
+msgstr "Используйте чудеса экстракта растений, образующих клетки, который был разработан более 6 лет назад и известен как эликсир жизни на Дальнем Востоке."
+
+#: .\hayotildizi\templates\pages\home.html:53
+msgid "Sog'lig'ingizni tiklashda yordam beramiz!"
+msgstr "Поможем восстановить ваше здоровье"
+
+#: .\hayotildizi\templates\pages\home.html:56
+msgid ""
+"Biz sizga kasalliklarning havfini kamaytirish va meyorlashtirish maqsadida "
+"ta'biy shifobaxsh HAYOTILDIZI mahsulotini taqdim etamiz."
+msgstr "Мы предлагаем вам натуральный лечебный продукт Hayotildizi, чтобы снизить и стандартизировать риск заболеваний."
+
+#: .\hayotildizi\templates\pages\navbar.html:54
+msgid "Bosh menyu"
+msgstr "Главное меню"
+
+#: .\hayotildizi\templates\pages\navbar.html:57
+msgid "Mahsulot"
+msgstr "Продукт"
+
+#: .\hayotildizi\templates\pages\navbar.html:60
+msgid "Xastaliklar"
+msgstr "Болезни"
+
+#: .\hayotildizi\templates\pages\navbar.html:63
+msgid "Xujjatlar"
+msgstr "Документы"
+
+#: .\hayotildizi\templates\pages\navbar.html:66
+msgid "Murojat uchun"
+msgstr "Для справки"

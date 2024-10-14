@@ -1,0 +1,77 @@
+{% load static %}
+{% load i18n %}
+
+
+  <!-- footer section -->
+
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_contact">
+            <h4>
+              {% trans 'Bizning manzil.' %}
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  {% trans 'Toshkent shax, Chilonzor tumani, Achvat kochasi 77' %}
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                {% trans 'Tel:+99871 230-33-99' %}
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  hayotildiziuz@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="footer_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer_col">
+          <div class="footer_detail">
+            <h4>
+              {% trans "Ma'lumot" %}
+            </h4>
+            <p style="color: #fff;">
+              {% trans "Hayotildizi 6 yil ichida ishlab chiqilgan va Uzoq Sharq hayot eliksiri sifatida tanilgan hujayra hosil qiluvchi o'simlik ekstraktining mo''jizalaridan foydalaning." %}            </p>
+          </div>
+        </div>
+          <div class="col-md-6 col-lg-3 footer_col">
+              <ul class="list-group list-group-horizontal">
+                  <li style="background: transparent; border: none;" class="list-group-item"><a href="instagram.com"><img height="50px" width="50px" src="https://cdn-icons-png.flaticon.com/512/174/174855.png"/></a></li>
+                  <li style="background: transparent; border: none;" class="list-group-item"><a href="#"><img height="50px" width="50px" src="https://cdn-icons-png.flaticon.com/512/174/174848.png"/></a></li>
+                  <li style="background: transparent; border: none;" class="list-group-item"><a href="#"><img height="50px" width="50px" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"/></a></li>
+                  <li style="background: transparent; border: none;" class="list-group-item"><a href="#"><img height="50px" width="50px" src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"/></a></li>
+              </ul>
+            </div>
+      </div>
+
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">Hayotildizi</a>
+        </p>
+      </div>
+    </div>
+  </footer>

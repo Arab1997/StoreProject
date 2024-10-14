@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+
+<br>
+<br>
+
+  <section class="about_section layout_margin-bottom">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{% static 'images/about2.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                {% trans 'Mahsulot haqida' %}
+              </h2>
+            </div>
+            <p style="color: #111">
+                          {% trans "Hayotildizi 6 yil ichida ishlab chiqilgan va uzoq Sharq hayot eliksiri sifatida tanilgan hujayra hosil qiluvchi o'simlik ekstraktining mo''jizalaridan foydalaning.Uzoq Sharqdagi hayot ixiri deb nomlanuvchi o'simlik hujayralari yaratuvchisi mo'jizasining mohiyatidan bahramand bo'lingMarkaziy asab tizimining miya faoliyatini oshiring. Ginseng tarkibida ko'p miqdordagi ginsenozidlar 600 dan ortiq ginsenozidlar har xil turdagi xom va qayta ishlangan ginsenglarda topilgan va o'rganilgan tufayli - terapevtik va profilaktik ta'sirida noyob va xilma-xil bo'lib, ushbu dorivor o'simlikdan to'g'ri foydalanish mumkin nafaqatturli xil terapevtik ta'sirlarni, balki hatto diametrli teskari ta'sirlarni ham ta'minlaydi. Masalan, qon bosimini me'yorga ko'tarish va kamaytirish, markaziy asab tizimining ishini tezlashtirish va sekinlashtirish, uyquni normallashtirish va uyquchanlikni yo'qotish, kerakli vaqtda faol bedorlik, eng yaxshi farovonlik va chidamlilik bosqichini uzaytirish." %}
+
+<br><br>
+              <h1>{% trans 'Ichish tartipi' %}</h1>
+
+              {% trans '*Tarkibi: Qizil Ginseng' %}
+              <br>
+              {% trans '*FOYDALANISh: Kuniga 2-3 marta 1 kapsuladan ichish tavsiya etiladi.' %}
+              <br>
+              {% trans '*RED GINSENG-800 mg x 60 kapsulalar.' %}
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
